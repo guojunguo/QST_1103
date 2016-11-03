@@ -20,11 +20,11 @@ public class TimestampTransfer {
 		SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 		while (scanner.hasNext()){
-			String line = scanner.nextLine();//读取数据
+			String line = scanner.nextLine();//读取每行数据
 			Date lineDate = null;
 			long lineTimestamp;
 			try {
-				lineDate = inputFormat.parse(line);//拿到每行的数据
+				lineDate = inputFormat.parse(line);//改变数据格式
 				lineTimestamp = lineDate.getTime();//为每一行记录时间戳
 				System.out.println(outputFormat.format(lineDate) + " to " + lineTimestamp);//输出数据
 			} catch (ParseException e) {
