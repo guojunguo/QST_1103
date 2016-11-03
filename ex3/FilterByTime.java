@@ -28,11 +28,13 @@ public class FilterByTime {
 			// 对每行进行处理
 			String line = scanner.nextLine();
 			// 切分获取IP，Time
-			String strIp = null;
-			String strTime = null;
+			String [] a1 = line.split(" ");
+			String strIp = a1[0];
+			String strTime = a1[3].substring(1, a1[3].length() - 1);
 			// 对在时间区间内的数据进行输出
 			System.out.println(strIp + "\t" + strTime);
 		}
 	}
 	
 }
+
